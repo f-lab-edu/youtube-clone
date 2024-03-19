@@ -11,7 +11,13 @@ buildscript {
         classpath(com.youtubeclone.buildsrc.Dep.androidGradlePlugin)
         classpath(com.youtubeclone.buildsrc.Dep.androidGradleApiPlugin)
         classpath(com.youtubeclone.buildsrc.Dep.Kotlin.gradlePlugin)
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.0")
+        classpath(com.youtubeclone.buildsrc.Dep.Kotlin.serializationPlugin)
 //        classpath(com.example.buildsrc.Dep.Hilt.plugin)
+    }
+
+    subprojects {
+        afterEvaluate {
+            project.apply("$rootDir/gradle/common.gradle")
+        }
     }
 }
