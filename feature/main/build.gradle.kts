@@ -21,8 +21,13 @@ android {
 }
 
 dependencies {
+    implementation(project(":feature:home"))
+    implementation(project(":feature:library"))
+    implementation(project(":feature:shorts"))
+    implementation(project(":feature:subscriptions"))
     implementation(project(":core:domain"))
     implementation(project(":core:model"))
+    implementation(project(":core:designsystem"))
 
     Dep.androidList.forEach(::implementation)
     Dep.Compose.ComposeList.forEach(::implementation)
