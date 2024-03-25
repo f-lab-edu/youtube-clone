@@ -21,8 +21,10 @@ include(
     ":core:domain",
     ":core:data",
     ":core:navigation",
+    ":core:designsystem",
 
     ":feature:main",
+    ":feature:home",
     ":feature:shorts",
     ":feature:subscriptions",
     ":feature:library"
