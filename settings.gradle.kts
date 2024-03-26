@@ -25,3 +25,4 @@ include(
 include(":feature:shorts")
 include(":feature:subscriptions")
 include(":feature:library")
+include(":core:common")
