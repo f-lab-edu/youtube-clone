@@ -1,11 +1,12 @@
 package com.youtubeclone.data.model
 
 
+import com.youtubeclone.model.YoutubeData
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class YoutubeResponse(
+data class YoutubeDataResponse(
     @SerialName("etag")
     val etag: String?,
     @SerialName("items")
@@ -111,3 +112,5 @@ data class YoutubeResponse(
         val totalResults: Int?
     )
 }
+
+//internal fun YoutubeDataResponse.toData(): YoutubeData = YoutubeData(etag, items = )
