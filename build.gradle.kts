@@ -12,7 +12,7 @@ buildscript {
         classpath(com.youtubeclone.buildsrc.Dep.androidGradleApiPlugin)
         classpath(com.youtubeclone.buildsrc.Dep.Kotlin.gradlePlugin)
         classpath(com.youtubeclone.buildsrc.Dep.Kotlin.serializationPlugin)
-//        classpath(com.example.buildsrc.Dep.Hilt.plugin)
+        classpath(com.youtubeclone.buildsrc.Dep.Hilt.plugin)
     }
 
     subprojects {
