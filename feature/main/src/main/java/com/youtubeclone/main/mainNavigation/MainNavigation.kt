@@ -11,6 +11,7 @@ import com.example.home.HomeScreen
 import com.example.library.LibraryScreen
 import com.youtubeclone.shorts.ShortsScreen
 import com.youtubeclone.subscribe.SubscriptionsScreen
+
 internal class MainNavigator(
     private val navController: NavHostController
 ) {
@@ -20,33 +21,34 @@ internal class MainNavigator(
     ) {
         NavHost(
             navController = navController,
-            startDestination = MainScreenRoute.Home.route
+            startDestination = MainScreenRoute.HOME.route
         ) {
             composable(
-                route = MainScreenRoute.Home.route
+                route = MainScreenRoute.HOME.route
             ) {
                 HomeScreen()
             }
 
             composable(
-                route = MainScreenRoute.Shorts.route
+                route = MainScreenRoute.SHORTS.route
             ) {
                 ShortsScreen()
             }
 
             composable(
-                route = MainScreenRoute.Library.route
+                route = MainScreenRoute.LIBRARY.route
             ) {
                 LibraryScreen()
             }
 
             composable(
-                route = MainScreenRoute.Subscriptions.route
+                route = MainScreenRoute.SUBSCRIPTIONS.route
             ) {
                 SubscriptionsScreen()
             }
         }
     }
+
     fun bottomTabNavigator(tab: MainTabs) {
         val navOptions = navOptions {
             popUpTo(navController.graph.findStartDestination().id) {
@@ -57,10 +59,10 @@ internal class MainNavigator(
         }
 
         when (tab) {
-            MainTabs.BottomHome -> navController.navigate(MainScreenRoute.Home.route)
-            MainTabs.BottomShorts -> navController.navigate(MainScreenRoute.Shorts.route)
-            MainTabs.BottomSubscriptions -> navController.navigate(MainScreenRoute.Subscriptions.route)
-            MainTabs.BottomLibrary -> navController.navigate(MainScreenRoute.Library.route)
+            MainTabs.BottomHome -> navController.navigate(MainScreenRoute.HOME.route)
+            MainTabs.BottomShorts -> navController.navigate(MainScreenRoute.SHORTS.route)
+            MainTabs.BottomSubscriptions -> navController.navigate(MainScreenRoute.SUBSCRIPTIONS.route)
+            MainTabs.BottomLibrary -> navController.navigate(MainScreenRoute.LIBRARY.route)
         }
     }
 

@@ -1,5 +1,6 @@
 package com.youtubeclone.main.mainNavigation
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -37,8 +38,8 @@ internal fun MainBottomNavigation(
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
         icons.forEach { it ->
-            MainBottomTabItem(tab = it, selected = it.route == navigator.currentRoute){
-               navigator.bottomTabNavigator(it)
+            MainBottomTabItem(tab = it, selected = it.route == navigator.currentRoute) {
+                navigator.bottomTabNavigator(it)
             }
         }
     }
@@ -55,7 +56,10 @@ private fun RowScope.MainBottomTabItem(
             .clickable(onClick = { onClick() }),
         contentAlignment = Alignment.Center,
     ) {
-        Row(verticalAlignment = Alignment.CenterVertically) {
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier.background(if (selected) YoutubeRed else White)
+        ) {
 //            Icon(
 //                painter = painterResource(tab.resource),
 //                contentDescription = tab.text,
