@@ -54,6 +54,7 @@ android {
 }
 
 dependencies {
+    implementation(project(":feature:main"))
 
     Dep.androidList.forEach(::implementation)
     Dep.Compose.ComposeList.forEach(::implementation)

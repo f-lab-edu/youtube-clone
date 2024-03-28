@@ -2,7 +2,7 @@ package com.youtubeclone.buildsrc
 
 object Project {
     const val app = ":app"
-    const val domain = ":domain"
-    const val data = ":data"
-    const val presentation = ":presentation"
+    const val domain = ":core:domain"
+    const val data = ":core:data"
+    const val model = ":core:model"
 }

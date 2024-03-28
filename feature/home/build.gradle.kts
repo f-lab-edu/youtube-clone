@@ -8,7 +8,7 @@ plugins {
 }
 
 android {
-    namespace = "com.youtubeclone.library"
+    namespace = "com.youtubeclone.home"
 
     buildFeatures {
         dataBinding = true
