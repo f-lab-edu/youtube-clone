@@ -21,6 +21,7 @@ android {
 }
 
 dependencies {
+    implementation(project(":core:designsystem"))
 
     Dep.androidList.forEach(::implementation)
     Dep.Compose.ComposeList.forEach(::implementation)

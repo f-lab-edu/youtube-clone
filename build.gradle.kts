@@ -13,6 +13,7 @@ buildscript {
         classpath(com.youtubeclone.buildsrc.Dep.Kotlin.gradlePlugin)
         classpath(com.youtubeclone.buildsrc.Dep.Kotlin.serializationPlugin)
         classpath(com.youtubeclone.buildsrc.Dep.Hilt.plugin)
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.0")
     }
 
     subprojects {
